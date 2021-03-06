@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bakery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+  nav {
+    display: flex;
+  background-color:black;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 60px;
+  width:100%;
+  
+  opacity: 0.6;
+}
+#uno {
+  list-style: none;
+  display: flex;
+  color:white;
+  justify-content:space-evenly ;
+}
+
+#lis {
+  display: inline-block;
+  margin-left: 30px;
+  padding-top: 12px;
+}
+a{
+    color:white;
+    text-decoration: none;
+    text-align: center;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+table,tr,th,td
+{
+
+padding: 15px;
+}
+table{
+margin-left: 50px;
+margin-bottom: 50px;
+width: 92%;
+}
+tr:hover{
+  background-color: rgb(240, 248, 248);
+}
+
+@media screen and (max-width: 600px) {
+section {
+  
+  align-items: center;
+  flex-direction: row;
+
+}
+}
+
+.flipCardContainer{
+  display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+#avtarImg{
+  width: 100%;
+  height: 300px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+#fcb1{
+  background-color: rgb(255, 247, 216);;
+  color: black;
+  transform: rotateY(180deg);
+}
+#fcb2{
+  background-color: rgb(255, 247, 216);;
+  color: black;
+  transform: rotateY(180deg);
+}
+#fcb3{
+  background: rgb(255, 247, 216);
+  color: black;
+  transform: rotateY(180deg);
+}
+#fcb4{
+  background-color:rgb(255, 247, 216);
+  color: black;
+  transform: rotateY(180deg);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+#contact{
+background-color:rgb(255, 247, 216) ;
+}
+@media screen and (max-width: 600px) {
+nav,
+#uno {
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+footer {
+text-align: center;
+padding: 3px;
+background-color:black;
+opacity: 0.6;
+color: white;
+}
+</style>
+</head>
+<body>
+  <nav>
+    <ul id="uno">
+        <li id="lis"><a href="#demo" >Home</a></li>
+        <li id="lis"><a href="#type">Types</a></li>
+        <li id="lis"><a href="#menu">Menu</a></li>
+        <li id="lis"><a href="contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1535229573109-d04520917965?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fGJha2VyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" width="1540" height="450">
+      
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1594706628605-879a44d615a6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjZ8fGJha2VyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" width="1540" height="450">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1571881319285-85e85d5e5887?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTh8fGJha2VyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" width="1540" height="450">
+       
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a></div>
+</div>
+</div>
+<br>
+<br>
+
+<h3 id="type" align="center">Celeberate Every Ocassion with Cake </h3>
+<br><br>
+<div style="overflow-x: auto;">
+<table border="1px solid black">
+  <tr>
+    <th>Cakes By Type</th>
+    <th>Cakes By Flavour</th>
+    <th>Cakes By Weight</th>
+    <th>Cakes By Ocassion</th>
+  </tr>
+  <tr>
+    <td>Regular Cakes</td>
+    <td>Butterscotch Cakes</td>
+    <td>1/2 Kg</td>
+    <td>Birthday Cakes</td>
+  </tr>
+  <tr>
+    <td>Photo Cakes</td>
+    <td>Black Forest Cakes</td>
+    <td>1 Kg</td>
+    <td>Anniversary Cakes</td>
+  </tr>
+  <tr>
+    <td>Cup Cakes</td>
+    <td>Pineapple Cakes</td>
+    <td>4 Kg</td>
+    <td>For every event</td>
+  </tr>
+</table></div>
+<br>
+<hr>
+<br>
+
+
+<h3 id="menu" align="center">Menu </h3>
+<br><br>
+<section>
+  <div class="flipCardContainer" id="menu" >
+    <div class="flip-card" >
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fGJha2VyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Macaroons" id="avtarImg">
+        </div>
+        <div class="flip-card-back"  id="fcb1">
+          <h2>Macaroons</h2> 
+          <p>&#8377; 90</p>
+          <p>Its a small cookie,made from almonds,coconut with jam or chocolate coating</p> 
+          <p><b>Calories : </b>404/100g</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFrZXJ5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Crossiant" id="avtarImg">
+        </div>
+        <div class="flip-card-back" id="fcb2">
+          <h1>Crossiant</h1> 
+          <p>&#8377; 107</p>
+          <p>A croissant is a buttery, flaky, named for its historical crescent shape.</p> 
+          <p><b>Calories : </b>406/100g</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://images.unsplash.com/photo-1570827777572-86b1cb77cd18?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGJha2VyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="CupCake" id="avtarImg">
+        </div>
+        <div class="flip-card-back"  id="fcb3">
+          <h1>Cup Cakes</h1> 
+          <p>&#8377; 40</p>
+          <p>It is a small cake designed to serve one person</p> 
+          <p><b>Calories : </b>305/100g</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://images.unsplash.com/photo-1506459225024-1428097a7e18?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fGJha2VyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Cake" id="avtarImg">
+        </div>
+        <div class="flip-card-back"  id="fcb4">
+          <h1>Cake</h1> 
+          <p>&#8377; 300</p>
+          <p>It is a form of sweet food made from flour, sugar, and other ingredients.</p> 
+          <p><b>Calories : </b>257/100g</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<br><br><br>
+  <hr><br>
+
+
+    <div id="contact" align="center"><br><br><br>
+      <h1>BAKERY</h1>
+      <p><i>pastry chef</i></p><br>
+      <p>ph(+91)000 999 0001</p>
+      <p>www.bakery.com</p>
+      <p>mail1@address.com</p><br>
+      <p>123 street address</p>
+      <p>India,state Himachal Pradesh</p>
+      <br>
+    </div>
+    <br><br>
+
+    <footer>
+      <p>Author: Bakery<br>
+      <a href="mail1@address.com">mail1@address.com</a></p>
+    </footer>
+</body>
+</html>
